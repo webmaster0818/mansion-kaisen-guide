@@ -1,0 +1,122 @@
+[
+  {
+    "id": "docomo-hikari",
+    "name": "ドコモ光",
+    "slug": "docomo-hikari",
+    "monthlyPrice": 4400,
+    "speed": "1Gbps",
+    "smartphoneDiscount": "ドコモ: 最大1,100円/月割引",
+    "features": ["フレッツ光回線（光コラボ）", "プロバイダ選択可", "dポイント還元", "工事費無料キャンペーン"],
+    "pros": ["ドコモユーザーならスマホセット割で大幅節約", "全国対応エリアが広い", "プロバイダを選べる自由度"],
+    "cons": ["ドコモ以外のスマホだと割引なし", "プロバイダによって速度差がある", "2年契約の縛りあり"],
+    "officialUrl": "https://www.docomo.ne.jp/hikari/"
+  },
+  {
+    "id": "softbank-hikari",
+    "name": "ソフトバンク光",
+    "slug": "softbank-hikari",
+    "monthlyPrice": 4180,
+    "speed": "1Gbps",
+    "smartphoneDiscount": "ソフトバンク/ワイモバイル: 最大1,100円/月割引",
+    "features": ["フレッツ光回線（光コラボ）", "おうち割光セット", "IPv6高速ハイブリッド", "他社違約金負担"],
+    "pros": ["ソフトバンク・ワイモバイルユーザーに最適", "乗り換えキャンペーンが充実", "IPv6で安定した速度"],
+    "cons": ["光BBユニットのレンタルが必要（月額513円）", "オプション加入が割引条件", "問い合わせ窓口が混雑しやすい"],
+    "officialUrl": "https://www.softbank.jp/ybb/sbhikari/"
+  },
+  {
+    "id": "au-hikari",
+    "name": "auひかり",
+    "slug": "au-hikari",
+    "monthlyPrice": 4180,
+    "speed": "1Gbps",
+    "smartphoneDiscount": "au/UQモバイル: 最大1,100円/月割引",
+    "features": ["KDDI独自回線", "高速通信（混雑しにくい）", "auスマートバリュー", "高額キャッシュバック"],
+    "pros": ["独自回線で夜間も速度が安定", "au・UQモバイルユーザーに大幅割引", "キャッシュバックが高額"],
+    "cons": ["マンションタイプは建物による制限あり", "提供エリアが限定的（関西・東海の一部非対応）", "撤去工事費が高い"],
+    "officialUrl": "https://www.au.com/internet/auhikari/"
+  },
+  {
+    "id": "nuro-hikari",
+    "name": "NURO光",
+    "slug": "nuro-hikari",
+    "monthlyPrice": 5200,
+    "speed": "2Gbps",
+    "smartphoneDiscount": "ソフトバンク: 最大1,100円/月割引",
+    "features": ["下り最大2Gbps", "ソニーネットワークコミュニケーションズ運営", "ONU（Wi-Fiルーター）無料", "特典で実質月額が安い"],
+    "pros": ["業界最速クラスの2Gbps", "Wi-Fiルーター内蔵ONUが無料", "特典適用で実質料金が安くなる"],
+    "cons": ["提供エリアが限定的", "開通まで時間がかかる（2回工事）", "マンション導入済み物件が少ない"],
+    "officialUrl": "https://www.nuro.jp/"
+  },
+  {
+    "id": "biglobe-hikari",
+    "name": "ビッグローブ光",
+    "slug": "biglobe-hikari",
+    "monthlyPrice": 4378,
+    "speed": "1Gbps",
+    "smartphoneDiscount": "au/UQモバイル/BIGLOBEモバイル: 最大1,100円/月割引",
+    "features": ["フレッツ光回線（光コラボ）", "auスマートバリュー対応", "IPv6オプション無料", "引っ越し先でも継続利用可"],
+    "pros": ["au・UQモバイルユーザーにもセット割が使える", "IPv6で快適な通信速度", "3年プランで月額がお得"],
+    "cons": ["3年契約の縛りがある", "キャッシュバック受取が12ヶ月後", "知名度がやや低い"],
+    "officialUrl": "https://join.biglobe.ne.jp/ftth/hikari/"
+  },
+  {
+    "id": "gmobb-hikari",
+    "name": "GMOとくとくBB光",
+    "slug": "gmobb-hikari",
+    "monthlyPrice": 3773,
+    "speed": "1Gbps",
+    "smartphoneDiscount": "なし（その分月額が安い）",
+    "features": ["フレッツ光回線（光コラボ）", "契約縛りなし", "Wi-Fiルーター無料レンタル", "シンプルな料金体系"],
+    "pros": ["マンションタイプ最安クラス", "解約違約金なし", "どのスマホキャリアでもお得"],
+    "cons": ["スマホセット割がない", "電話サポートが繋がりにくい", "オプションが少ない"],
+    "officialUrl": "https://gmobb.jp/lp/gmohikari/"
+  },
+  {
+    "id": "rakuten-hikari",
+    "name": "楽天ひかり",
+    "slug": "rakuten-hikari",
+    "monthlyPrice": 4180,
+    "speed": "1Gbps",
+    "smartphoneDiscount": "楽天モバイル: 楽天ポイント+1倍",
+    "features": ["フレッツ光回線（光コラボ）", "楽天ポイントSPU対象", "IPv6（クロスパス）対応", "楽天経済圏との相性抜群"],
+    "pros": ["楽天モバイルと併用でポイント倍率アップ", "楽天市場のヘビーユーザーにメリット大", "IPv6で安定通信"],
+    "cons": ["直接的なスマホ割引はない", "ポイント還元は楽天市場利用が前提", "2年or3年契約の縛りあり"],
+    "officialUrl": "https://network.mobile.rakuten.co.jp/hikari/"
+  },
+  {
+    "id": "en-hikari",
+    "name": "enひかり",
+    "slug": "en-hikari",
+    "monthlyPrice": 3520,
+    "speed": "1Gbps",
+    "smartphoneDiscount": "UQモバイル/ahamo/povo: 月額110円割引",
+    "features": ["フレッツ光回線（光コラボ）", "契約縛りなし", "業界最安水準", "最低利用期間なし"],
+    "pros": ["月額料金が業界最安クラス", "契約縛り・違約金なし", "格安SIMユーザーに最適"],
+    "cons": ["キャッシュバックがない", "Wi-Fiルーターは自分で用意", "サポートが最小限"],
+    "officialUrl": "https://enhikari.jp/"
+  },
+  {
+    "id": "sonet-hikari",
+    "name": "So-net光",
+    "slug": "sonet-hikari",
+    "monthlyPrice": 4928,
+    "speed": "1Gbps",
+    "smartphoneDiscount": "au/UQモバイル/NUROモバイル: 最大1,100円/月割引",
+    "features": ["フレッツ光回線（光コラボ）", "ソニーグループ運営", "セキュリティソフト無料", "v6プラス標準対応"],
+    "pros": ["セキュリティソフトが無料で付属", "v6プラスで安定した速度", "ソニーグループの安心感"],
+    "cons": ["月額料金がやや高め", "キャッシュバック条件が複雑", "解約時の違約金に注意"],
+    "officialUrl": "https://www.so-net.ne.jp/access/hikari/collabo/"
+  },
+  {
+    "id": "jcom-net",
+    "name": "J:COM NET",
+    "slug": "jcom-net",
+    "monthlyPrice": 4928,
+    "speed": "1Gbps",
+    "smartphoneDiscount": "au/UQモバイル: 最大1,100円/月割引",
+    "features": ["ケーブルTV回線/光回線", "TV・電話とのセットプラン", "マンション一括導入が多い", "au/UQスマートバリュー対応"],
+    "pros": ["マンション導入済み物件が多い", "TV・ネット・電話のセットでお得", "工事不要の場合がある"],
+    "cons": ["上り速度が遅い場合がある", "ケーブル回線は光より不安定", "解約時の手続きが煩雑"],
+    "officialUrl": "https://www.jcom.co.jp/service/net/"
+  }
+]
