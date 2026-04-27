@@ -1,0 +1,302 @@
+[
+  {
+    "slug": "docomo",
+    "title": "ドコモユーザーにおすすめの光回線",
+    "description": "ドコモ（NTTドコモ）のスマホをお使いの方向けに、最もお得な光回線を紹介します。ドコモ光はセット割で家族全員のスマホ料金が最大1,100円/月割引になる最有力候補です。",
+    "heroText": "ドコモスマホと組み合わせると、毎月最大1,100円×家族全員分の割引が受けられます。光回線とスマホをセットにするだけで、年間の通信費を大幅に節約できます。",
+    "recommendedProviders": [
+      {
+        "providerId": "docomo-hikari",
+        "rank": 1,
+        "reason": "ドコモ光とドコモスマホのセットで「ドコモ光セット割」が適用。家族全員のスマホ料金が最大1,100円/月割引になります。",
+        "discountDetail": "スマホ割: 最大1,100円/月（家族全員）",
+        "estimatedMonthlyTotal": "スマホ+光で実質約2,000〜3,000円台に"
+      },
+      {
+        "providerId": "gmobb-hikari",
+        "rank": 2,
+        "reason": "ドコモのセット割がない場合でも月額最安クラス。dカードゴールドの「dカード払い特典」との組み合わせもおすすめ。",
+        "discountDetail": "セット割なし（月額3,773円〜）",
+        "estimatedMonthlyTotal": "単純月額が最安"
+      },
+      {
+        "providerId": "biglobe-hikari",
+        "rank": 3,
+        "reason": "ビッグローブモバイル（ドコモ系MVNO）利用者にはセット割が使えます。IPv6で安定した速度も魅力。",
+        "discountDetail": "BIGLOBEモバイル利用者: 最大1,100円/月",
+        "estimatedMonthlyTotal": "格安SIM×光でコスパ重視"
+      }
+    ],
+    "discountInfo": {
+      "name": "ドコモ光セット割",
+      "amount": "最大1,100円/月",
+      "eligibility": "ドコモのスマホプランとドコモ光の両方を契約",
+      "notes": "家族全員分に割引が適用されます。5Gギガホ等のプランが対象。"
+    },
+    "comparisonData": [
+      {
+        "provider": "ドコモ光",
+        "monthlyPrice": 4400,
+        "smartphoneDiscount": "最大1,100円/月×家族全員",
+        "ipv6": true,
+        "contractPeriod": "2年",
+        "recommended": true
+      },
+      {
+        "provider": "GMOとくとくBB光",
+        "monthlyPrice": 3773,
+        "smartphoneDiscount": "なし",
+        "ipv6": true,
+        "contractPeriod": "なし",
+        "recommended": false
+      },
+      {
+        "provider": "ビッグローブ光",
+        "monthlyPrice": 4378,
+        "smartphoneDiscount": "BIGLOBEモバイル利用者のみ",
+        "ipv6": true,
+        "contractPeriod": "3年",
+        "recommended": false
+      }
+    ],
+    "faqs": [
+      {
+        "q": "ドコモ光セット割はいつから適用されますか？",
+        "a": "ドコモ光の開通月の翌月から適用されます。ただし、ドコモスマホのプランによっては対象外の場合があります。申し込み前にドコモのホームページで対象プランを確認してください。"
+      },
+      {
+        "q": "家族でドコモスマホを使っていますが、光回線は1回線で全員割引になりますか？",
+        "a": "はい、ドコモ光セット割は同一「ファミリー割引」グループ内のドコモスマホ全回線に割引が適用されます。家族4人ならスマホ4台分×最大1,100円/月の割引が受けられます。"
+      },
+      {
+        "q": "ドコモ光のプロバイダはどれを選べばいいですか？",
+        "a": "速度・サポートの観点から「ドコモ光×GMOとくとくBB」または「ドコモ光×OCN by NTT Com」が評価が高いです。IPv6（v6プラス）対応プロバイダを選ぶと夜間の速度が安定します。"
+      }
+    ]
+  },
+  {
+    "slug": "au",
+    "title": "auユーザーにおすすめの光回線",
+    "description": "au（KDDI）のスマホをお使いの方向けに、最もお得な光回線を紹介します。auひかりは独自回線で速度も安定しており、auスマートバリューでスマホとのセット割引が受けられます。",
+    "heroText": "auスマホとauひかりを組み合わせる「auスマートバリュー」で、スマホ料金が最大1,100円/月割引。さらにauひかりは独自回線のため、フレッツ光より夜間の速度低下が少ない特徴があります。",
+    "recommendedProviders": [
+      {
+        "providerId": "au-hikari",
+        "rank": 1,
+        "reason": "auの独自回線で速度が安定しており、auスマートバリューでスマホ料金も割引。高額キャッシュバックキャンペーンも魅力です。",
+        "discountDetail": "auスマートバリュー: 最大1,100円/月",
+        "estimatedMonthlyTotal": "スマホ+光で実質約2,000〜3,000円台に"
+      },
+      {
+        "providerId": "biglobe-hikari",
+        "rank": 2,
+        "reason": "フレッツ光（光コラボ）ながらauスマートバリューの対象で、auひかり未対応エリアでも割引が受けられます。",
+        "discountDetail": "auスマートバリュー: 最大1,100円/月",
+        "estimatedMonthlyTotal": "地方でauひかりが使えない場合の代替"
+      },
+      {
+        "providerId": "sonet-hikari",
+        "rank": 3,
+        "reason": "auスマートバリュー対象で、セキュリティソフト無料付きが強み。ソニーグループの安心感もあります。",
+        "discountDetail": "au/UQモバイル: 最大1,100円/月",
+        "estimatedMonthlyTotal": "セキュリティ込みでコスパ良好"
+      }
+    ],
+    "discountInfo": {
+      "name": "auスマートバリュー",
+      "amount": "最大1,100円/月",
+      "eligibility": "auまたはUQモバイルのスマホとauひかり（またはauスマートバリュー対応光コラボ）の契約",
+      "notes": "スマホ1回線につき割引。家族全員分に適用されます。"
+    },
+    "comparisonData": [
+      {
+        "provider": "auひかり",
+        "monthlyPrice": 4180,
+        "smartphoneDiscount": "最大1,100円/月×家族全員",
+        "ipv6": true,
+        "contractPeriod": "2年",
+        "recommended": true
+      },
+      {
+        "provider": "ビッグローブ光",
+        "monthlyPrice": 4378,
+        "smartphoneDiscount": "auスマートバリュー対象",
+        "ipv6": true,
+        "contractPeriod": "3年",
+        "recommended": false
+      },
+      {
+        "provider": "So-net光",
+        "monthlyPrice": 4928,
+        "smartphoneDiscount": "auスマートバリュー対象",
+        "ipv6": true,
+        "contractPeriod": "2年",
+        "recommended": false
+      }
+    ],
+    "faqs": [
+      {
+        "q": "UQモバイルのスマホでもauひかりの割引は受けられますか？",
+        "a": "はい、UQモバイルもauスマートバリューの対象です。auひかりとUQモバイルを組み合わせることで、格安スマホと光回線の割引を同時に受けられます。"
+      },
+      {
+        "q": "auひかりが提供エリア外の場合はどうすればいいですか？",
+        "a": "auスマートバリュー対応の光コラボ（ビッグローブ光・So-net光等）を選べば、auひかり非対応エリアでも割引が受けられます。エリアはau公式サイトで確認してください。"
+      },
+      {
+        "q": "auひかりのマンションタイプとは？",
+        "a": "auひかりマンションは、マンション・集合住宅向けの料金プランで、戸建てタイプより月額料金が安くなっています。ただし、建物によって提供できない場合があります。"
+      }
+    ]
+  },
+  {
+    "slug": "softbank",
+    "title": "ソフトバンクユーザーにおすすめの光回線",
+    "description": "ソフトバンク（SoftBank）のスマホをお使いの方向けに、最もお得な光回線を紹介します。ソフトバンク光はおうち割光セットで家族全員割引が受けられ、NURO光もソフトバンクスマホとのセット割があります。",
+    "heroText": "ソフトバンクスマホとソフトバンク光を組み合わせる「おうち割光セット」で、スマホ料金が最大1,100円/月割引。ワイモバイルユーザーも対象です。速度重視ならNURO光との組み合わせも検討を。",
+    "recommendedProviders": [
+      {
+        "providerId": "softbank-hikari",
+        "rank": 1,
+        "reason": "ソフトバンク・ワイモバイルユーザーなら「おうち割光セット」で家族全員のスマホ料金が割引。乗り換えキャンペーンも充実しています。",
+        "discountDetail": "おうち割光セット: 最大1,100円/月×家族",
+        "estimatedMonthlyTotal": "スマホ+光で実質約2,000〜3,000円台に"
+      },
+      {
+        "providerId": "nuro-hikari",
+        "rank": 2,
+        "reason": "ソフトバンクスマホとNURO光のセット割で最大1,100円/月割引。さらに下り最大2Gbpsの超高速通信が魅力です。",
+        "discountDetail": "NURO光×SoftBankセット割: 最大1,100円/月",
+        "estimatedMonthlyTotal": "速度重視ならコスパ最高"
+      },
+      {
+        "providerId": "en-hikari",
+        "rank": 3,
+        "reason": "セット割はないが月額最安クラス。ワイモバイル（格安プラン）と組み合わせてトータルコストを抑えたい方向け。",
+        "discountDetail": "セット割なし（月額3,520円〜）",
+        "estimatedMonthlyTotal": "とにかく安くしたい方向け"
+      }
+    ],
+    "discountInfo": {
+      "name": "おうち割光セット",
+      "amount": "最大1,100円/月",
+      "eligibility": "ソフトバンクまたはワイモバイルのスマホとソフトバンク光の契約",
+      "notes": "光BBユニット（月513円）のレンタルが条件です。家族全員分に適用。"
+    },
+    "comparisonData": [
+      {
+        "provider": "ソフトバンク光",
+        "monthlyPrice": 4180,
+        "smartphoneDiscount": "最大1,100円/月×家族全員（SB/Y!mobile）",
+        "ipv6": true,
+        "contractPeriod": "2年",
+        "recommended": true
+      },
+      {
+        "provider": "NURO光",
+        "monthlyPrice": 5200,
+        "smartphoneDiscount": "SoftBankスマホと: 最大1,100円/月",
+        "ipv6": true,
+        "contractPeriod": "3年",
+        "recommended": true
+      },
+      {
+        "provider": "enひかり",
+        "monthlyPrice": 3520,
+        "smartphoneDiscount": "ほぼなし（110円のみ）",
+        "ipv6": true,
+        "contractPeriod": "なし",
+        "recommended": false
+      }
+    ],
+    "faqs": [
+      {
+        "q": "ワイモバイルのスマホでもソフトバンク光の割引は受けられますか？",
+        "a": "はい、ワイモバイルもおうち割光セットの対象です。ソフトバンク光とワイモバイルを組み合わせることで、格安スマホを使いながら光回線の割引も受けられます。"
+      },
+      {
+        "q": "NURO光とソフトバンクのセット割はどうやって申し込みますか？",
+        "a": "NURO光の申し込みページで「NURO光 for SoftBank」を選択します。ソフトバンクスマホの回線情報を入力することでセット割が適用されます。"
+      },
+      {
+        "q": "ソフトバンク光の光BBユニットは必要ですか？",
+        "a": "おうち割光セット（スマホ割引）を受けるためには光BBユニット（月513円）のレンタルが必要です。ただし、Wi-Fiルーターとして使用できるため、別途ルーター購入が不要になるメリットもあります。"
+      }
+    ]
+  },
+  {
+    "slug": "kakuyasu",
+    "title": "格安SIMユーザーにおすすめの光回線",
+    "description": "格安SIM（MVNO）をお使いの方向けに、最もコスパの良い光回線を紹介します。キャリアのセット割がない分、月額料金が安いプロバイダを選ぶことが節約のポイントです。",
+    "heroText": "格安SIMはセット割がないケースが多いですが、だからこそ月額料金が安い光回線を選ぶことが重要です。enひかり・GMOとくとくBB光など、月額3,500〜3,800円台のプロバイダを組み合わせれば、スマホ+光で月5,000円台も実現可能です。",
+    "recommendedProviders": [
+      {
+        "providerId": "en-hikari",
+        "rank": 1,
+        "reason": "業界最安クラスの月額3,520円。契約縛りなし・違約金なしで賃貸でも安心。UQモバイル/ahamo/povo利用者は110円/月割引あり。",
+        "discountDetail": "UQモバイル/ahamo/povo: 110円/月割引",
+        "estimatedMonthlyTotal": "スマホ+光で月5,000〜6,000円台"
+      },
+      {
+        "providerId": "gmobb-hikari",
+        "rank": 2,
+        "reason": "月額3,773円と最安クラスで、契約縛りなし。Wi-Fiルーター無料レンタル付きで初期費用を抑えられます。",
+        "discountDetail": "セット割なし（月額3,773円〜）",
+        "estimatedMonthlyTotal": "スマホ+光で月6,000円前後"
+      },
+      {
+        "providerId": "rakuten-hikari",
+        "rank": 3,
+        "reason": "楽天モバイル利用者は楽天ポイントSPU+1倍。楽天市場をよく使う方はポイント還元で実質コストが下がります。",
+        "discountDetail": "楽天モバイル利用: 楽天SPU+1倍",
+        "estimatedMonthlyTotal": "楽天経済圏フル活用でポイント還元あり"
+      }
+    ],
+    "discountInfo": {
+      "name": "格安SIMとの組み合わせポイント",
+      "amount": "月額最安3,520円〜",
+      "eligibility": "スマホキャリアを問わず利用可能",
+      "notes": "セット割がない分、月額料金の安さとキャッシュバックで選ぶのがポイントです。"
+    },
+    "comparisonData": [
+      {
+        "provider": "enひかり",
+        "monthlyPrice": 3520,
+        "smartphoneDiscount": "UQモバイル等: 110円/月",
+        "ipv6": true,
+        "contractPeriod": "なし",
+        "recommended": true
+      },
+      {
+        "provider": "GMOとくとくBB光",
+        "monthlyPrice": 3773,
+        "smartphoneDiscount": "なし",
+        "ipv6": true,
+        "contractPeriod": "なし",
+        "recommended": true
+      },
+      {
+        "provider": "楽天ひかり",
+        "monthlyPrice": 4180,
+        "smartphoneDiscount": "楽天モバイル: SPU+1倍",
+        "ipv6": true,
+        "contractPeriod": "2〜3年",
+        "recommended": false
+      }
+    ],
+    "faqs": [
+      {
+        "q": "格安SIMと格安光回線を組み合わせた場合、月額はどのくらいになりますか？",
+        "a": "例えばahamoスマホ（月2,970円）+enひかり（月3,520円）=月6,490円が目安です。大手キャリアのスマホ+光（月8,000〜12,000円）と比べて年間約2〜5万円の節約になります。"
+      },
+      {
+        "q": "格安SIMユーザーはキャッシュバックキャンペーンを活用できますか？",
+        "a": "はい、GMOとくとくBB光などは格安SIMユーザーでも高額キャッシュバックを受け取れます。キャッシュバックの受け取り条件（時期・方法）をよく確認してから申し込みましょう。"
+      },
+      {
+        "q": "povo2.0と組み合わせる場合、おすすめの光回線はありますか？",
+        "a": "povo2.0はenひかりで月110円割引が受けられます。ただし、povo2.0自体は基本料金0円のため、光回線側のコスト削減を優先するなら月額最安のenひかりまたはGMOとくとくBB光がおすすめです。"
+      }
+    ]
+  }
+]

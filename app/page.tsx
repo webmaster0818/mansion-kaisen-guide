@@ -1,4 +1,6 @@
 import providers from "../data/providers.json";
+import SiteHeader from "./components/SiteHeader";
+import SiteFooter from "./components/SiteFooter";
 
 const top3 = [providers[0], providers[1], providers[2]]; // ドコモ光、ソフトバンク光、auひかり
 
@@ -151,51 +153,7 @@ const faqItems = [
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-              <svg
-                className="w-5 h-5 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12 18.75h.008v.008H12v-.008z"
-                />
-              </svg>
-            </div>
-            <span className="text-lg font-bold text-foreground">
-              マンション回線ガイド
-            </span>
-          </div>
-          <nav className="hidden md:flex items-center gap-6 text-sm text-muted">
-            <a href="#wiring" className="hover:text-primary transition-colors">
-              配線方式
-            </a>
-            <a
-              href="#smartphone"
-              className="hover:text-primary transition-colors"
-            >
-              スマホ別おすすめ
-            </a>
-            <a href="#ranking" className="hover:text-primary transition-colors">
-              ランキング
-            </a>
-            <a href="#compare" className="hover:text-primary transition-colors">
-              料金比較
-            </a>
-            <a href="#faq" className="hover:text-primary transition-colors">
-              FAQ
-            </a>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main className="flex-1">
         {/* Hero */}
@@ -330,6 +288,18 @@ export default function Home() {
                 </div>
               ))}
             </div>
+            {/* 配線方式ガイドへの内部リンク */}
+            <div className="mt-8 text-center">
+              <a
+                href="/wiring/overview/"
+                className="inline-flex items-center gap-2 text-primary hover:text-primary-dark font-medium text-sm transition-colors"
+              >
+                配線方式の詳細ガイドを見る
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </a>
+            </div>
           </div>
         </section>
 
@@ -369,6 +339,21 @@ export default function Home() {
                   <p className="text-sm text-muted">{match.reason}</p>
                 </div>
               ))}
+            </div>
+            {/* キャリア別詳細ページへの内部リンク */}
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <a href="/carrier/docomo/" className="text-sm px-4 py-2 rounded-lg bg-white border border-border hover:border-primary hover:bg-primary/5 transition-colors text-foreground">
+                ドコモ詳細 →
+              </a>
+              <a href="/carrier/au/" className="text-sm px-4 py-2 rounded-lg bg-white border border-border hover:border-primary hover:bg-primary/5 transition-colors text-foreground">
+                au詳細 →
+              </a>
+              <a href="/carrier/softbank/" className="text-sm px-4 py-2 rounded-lg bg-white border border-border hover:border-primary hover:bg-primary/5 transition-colors text-foreground">
+                ソフトバンク詳細 →
+              </a>
+              <a href="/carrier/kakuyasu/" className="text-sm px-4 py-2 rounded-lg bg-white border border-border hover:border-primary hover:bg-primary/5 transition-colors text-foreground">
+                格安SIM詳細 →
+              </a>
             </div>
           </div>
         </section>
@@ -541,7 +526,9 @@ export default function Home() {
                       } hover:bg-primary/5 transition-colors`}
                     >
                       <td className="px-4 py-3 font-medium text-foreground whitespace-nowrap">
-                        {p.name}
+                        <a href={`/provider/${p.slug}/`} className="hover:text-primary hover:underline transition-colors">
+                          {p.name}
+                        </a>
                       </td>
                       <td className="px-4 py-3 text-right font-bold text-primary whitespace-nowrap">
                         {p.monthlyPrice.toLocaleString()}円
@@ -645,67 +632,7 @@ export default function Home() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-slate-900 text-slate-400 py-12">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-8">
-            <div>
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-7 h-7 bg-primary rounded-lg flex items-center justify-center">
-                  <svg
-                    className="w-4 h-4 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12 18.75h.008v.008H12v-.008z"
-                    />
-                  </svg>
-                </div>
-                <span className="text-white font-bold">
-                  マンション回線ガイド
-                </span>
-              </div>
-              <p className="text-sm leading-relaxed max-w-sm">
-                マンション・アパート向けの光回線選びを、配線方式・料金・スマホ割の観点から徹底サポートします。
-              </p>
-            </div>
-            <div className="flex flex-col gap-2 text-sm">
-              <a href="#wiring" className="hover:text-white transition-colors">
-                配線方式の解説
-              </a>
-              <a
-                href="#smartphone"
-                className="hover:text-white transition-colors"
-              >
-                スマホ別おすすめ
-              </a>
-              <a href="#ranking" className="hover:text-white transition-colors">
-                おすすめランキング
-              </a>
-              <a href="#compare" className="hover:text-white transition-colors">
-                料金比較表
-              </a>
-              <a href="#faq" className="hover:text-white transition-colors">
-                よくある質問
-              </a>
-            </div>
-          </div>
-          <div className="border-t border-slate-800 pt-6">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-              <p>運営: 株式会社MediaX（東京都渋谷区）</p>
-              <p>
-                &copy; {new Date().getFullYear()} マンション回線ガイド All
-                Rights Reserved.
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
