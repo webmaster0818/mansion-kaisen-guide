@@ -36,21 +36,27 @@ export default function SiteHeader() {
         </span>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6 text-sm text-muted ml-auto">
+        <nav className="hidden md:flex items-center gap-5 text-sm text-muted ml-auto">
           <a href="/#wiring" className="hover:text-primary transition-colors">
             配線方式
           </a>
           <a href="/#smartphone" className="hover:text-primary transition-colors">
             スマホ別
           </a>
-          <a href="/#ranking" className="hover:text-primary transition-colors">
+          <a href="/rental/how-to-install/" className="hover:text-primary transition-colors">
+            賃貸ガイド
+          </a>
+          <a href="/trouble/slow-speed/" className="hover:text-primary transition-colors">
+            お悩み別
+          </a>
+          <a href="/knowledge/what-is-hikari/" className="hover:text-primary transition-colors">
+            基礎知識
+          </a>
+          <a href="/ranking/cheap/" className="hover:text-primary transition-colors">
             ランキング
           </a>
-          <a href="/#compare" className="hover:text-primary transition-colors">
-            料金比較
-          </a>
-          <a href="/#faq" className="hover:text-primary transition-colors">
-            FAQ
+          <a href="/article/nuro-mansion/" className="hover:text-primary transition-colors">
+            コラム
           </a>
         </nav>
 
@@ -92,41 +98,178 @@ export default function SiteHeader() {
             <span className="inline-flex items-center gap-1 text-xs text-muted border border-border rounded px-2 py-0.5 bg-gray-50 self-start">
               PRを含みます
             </span>
-            <nav className="flex flex-col gap-3 text-sm">
+            <nav className="flex flex-col gap-1 text-sm">
+              <p className="text-xs font-bold text-muted uppercase tracking-wider mt-2 mb-1">基本ガイド</p>
               <a
                 href="/#wiring"
-                className="text-foreground hover:text-primary transition-colors py-1"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
                 onClick={() => setMenuOpen(false)}
               >
                 配線方式ガイド
               </a>
               <a
                 href="/#smartphone"
-                className="text-foreground hover:text-primary transition-colors py-1"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
                 onClick={() => setMenuOpen(false)}
               >
                 スマホ別おすすめ
               </a>
               <a
-                href="/#ranking"
-                className="text-foreground hover:text-primary transition-colors py-1"
-                onClick={() => setMenuOpen(false)}
-              >
-                おすすめランキング
-              </a>
-              <a
                 href="/#compare"
-                className="text-foreground hover:text-primary transition-colors py-1"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
                 onClick={() => setMenuOpen(false)}
               >
                 料金比較表
               </a>
+
+              <p className="text-xs font-bold text-muted uppercase tracking-wider mt-3 mb-1">賃貸ガイド</p>
               <a
-                href="/#faq"
-                className="text-foreground hover:text-primary transition-colors py-1"
+                href="/rental/how-to-install/"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
                 onClick={() => setMenuOpen(false)}
               >
-                よくある質問
+                賃貸での光回線の引き方
+              </a>
+              <a
+                href="/rental/permission/"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
+                onClick={() => setMenuOpen(false)}
+              >
+                管理会社への許可申請
+              </a>
+              <a
+                href="/rental/alternatives/"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
+                onClick={() => setMenuOpen(false)}
+              >
+                光回線NGの場合の代替案
+              </a>
+              <a
+                href="/rental/restoration/"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
+                onClick={() => setMenuOpen(false)}
+              >
+                退去時の原状回復
+              </a>
+              <a
+                href="/rental/frequent-movers/"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
+                onClick={() => setMenuOpen(false)}
+              >
+                引越し多い人の回線選び
+              </a>
+
+              <p className="text-xs font-bold text-muted uppercase tracking-wider mt-3 mb-1">お悩み別</p>
+              <a
+                href="/trouble/slow-speed/"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
+                onClick={() => setMenuOpen(false)}
+              >
+                回線が遅い時の改善方法
+              </a>
+              <a
+                href="/trouble/remote-work/"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
+                onClick={() => setMenuOpen(false)}
+              >
+                在宅ワーク向け回線
+              </a>
+              <a
+                href="/trouble/gaming/"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
+                onClick={() => setMenuOpen(false)}
+              >
+                ゲーマー向け最速回線
+              </a>
+              <a
+                href="/trouble/single-living/"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
+                onClick={() => setMenuOpen(false)}
+              >
+                一人暮らし向け安い回線
+              </a>
+              <a
+                href="/trouble/family/"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
+                onClick={() => setMenuOpen(false)}
+              >
+                ファミリー向け回線
+              </a>
+
+              <p className="text-xs font-bold text-muted uppercase tracking-wider mt-3 mb-1">基礎知識</p>
+              <a
+                href="/knowledge/what-is-hikari/"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
+                onClick={() => setMenuOpen(false)}
+              >
+                光回線とは？
+              </a>
+              <a
+                href="/knowledge/ipv6/"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
+                onClick={() => setMenuOpen(false)}
+              >
+                IPv6（IPoE）とは？
+              </a>
+              <a
+                href="/knowledge/construction-flow/"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
+                onClick={() => setMenuOpen(false)}
+              >
+                工事の流れ
+              </a>
+              <a
+                href="/knowledge/cashback/"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
+                onClick={() => setMenuOpen(false)}
+              >
+                キャッシュバック比較
+              </a>
+
+              <p className="text-xs font-bold text-muted uppercase tracking-wider mt-3 mb-1">ランキング</p>
+              <a
+                href="/ranking/cheap/"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
+                onClick={() => setMenuOpen(false)}
+              >
+                安い光回線ランキング
+              </a>
+              <a
+                href="/ranking/fastest/"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
+                onClick={() => setMenuOpen(false)}
+              >
+                速い光回線ランキング
+              </a>
+              <a
+                href="/ranking/no-construction/"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
+                onClick={() => setMenuOpen(false)}
+              >
+                工事不要の回線比較
+              </a>
+
+              <p className="text-xs font-bold text-muted uppercase tracking-wider mt-3 mb-1">コラム</p>
+              <a
+                href="/article/nuro-mansion/"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
+                onClick={() => setMenuOpen(false)}
+              >
+                NURO光 マンション
+              </a>
+              <a
+                href="/article/wifi-router/"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
+                onClick={() => setMenuOpen(false)}
+              >
+                Wi-Fiルーターおすすめ
+              </a>
+              <a
+                href="/article/mansion-internet-free/"
+                className="text-foreground hover:text-primary transition-colors py-1.5"
+                onClick={() => setMenuOpen(false)}
+              >
+                備え付けネット無料の罠
               </a>
             </nav>
           </div>

@@ -29,10 +29,10 @@ export default function SiteFooter() {
           </div>
 
           {/* Links Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 text-sm">
-            {/* 配線方式 */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+            {/* 配線・キャリア */}
             <div>
-              <p className="text-white font-bold mb-3">配線方式ガイド</p>
+              <p className="text-white font-bold mb-3">配線・スマホ別</p>
               <ul className="space-y-2">
                 <li>
                   <a href="/wiring/overview/" className="hover:text-white transition-colors">
@@ -50,23 +50,6 @@ export default function SiteFooter() {
                   </a>
                 </li>
                 <li>
-                  <a href="/wiring/lan/" className="hover:text-white transition-colors">
-                    LAN配線方式
-                  </a>
-                </li>
-                <li>
-                  <a href="/wiring/check-method/" className="hover:text-white transition-colors">
-                    確認方法
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            {/* キャリア別 */}
-            <div>
-              <p className="text-white font-bold mb-3">スマホ別おすすめ</p>
-              <ul className="space-y-2">
-                <li>
                   <a href="/carrier/docomo/" className="hover:text-white transition-colors">
                     ドコモユーザー向け
                   </a>
@@ -78,39 +61,108 @@ export default function SiteFooter() {
                 </li>
                 <li>
                   <a href="/carrier/softbank/" className="hover:text-white transition-colors">
-                    ソフトバンクユーザー向け
-                  </a>
-                </li>
-                <li>
-                  <a href="/carrier/kakuyasu/" className="hover:text-white transition-colors">
-                    格安SIMユーザー向け
+                    SBユーザー向け
                   </a>
                 </li>
               </ul>
             </div>
 
-            {/* プロバイダ */}
+            {/* 賃貸ガイド */}
             <div>
-              <p className="text-white font-bold mb-3">プロバイダ比較</p>
+              <p className="text-white font-bold mb-3">賃貸ガイド</p>
               <ul className="space-y-2">
                 <li>
-                  <a href="/provider/docomo-hikari/" className="hover:text-white transition-colors">
-                    ドコモ光
+                  <a href="/rental/how-to-install/" className="hover:text-white transition-colors">
+                    光回線の引き方
                   </a>
                 </li>
                 <li>
-                  <a href="/provider/softbank-hikari/" className="hover:text-white transition-colors">
-                    ソフトバンク光
+                  <a href="/rental/permission/" className="hover:text-white transition-colors">
+                    管理会社への許可
                   </a>
                 </li>
                 <li>
-                  <a href="/provider/au-hikari/" className="hover:text-white transition-colors">
-                    auひかり
+                  <a href="/rental/alternatives/" className="hover:text-white transition-colors">
+                    光回線NGの代替案
                   </a>
                 </li>
                 <li>
-                  <a href="/provider/nuro-hikari/" className="hover:text-white transition-colors">
-                    NURO光
+                  <a href="/rental/restoration/" className="hover:text-white transition-colors">
+                    退去時の原状回復
+                  </a>
+                </li>
+                <li>
+                  <a href="/rental/frequent-movers/" className="hover:text-white transition-colors">
+                    引越し多い人向け
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* お悩み別 */}
+            <div>
+              <p className="text-white font-bold mb-3">お悩み別</p>
+              <ul className="space-y-2">
+                <li>
+                  <a href="/trouble/slow-speed/" className="hover:text-white transition-colors">
+                    回線が遅い時の対策
+                  </a>
+                </li>
+                <li>
+                  <a href="/trouble/remote-work/" className="hover:text-white transition-colors">
+                    在宅ワーク向け
+                  </a>
+                </li>
+                <li>
+                  <a href="/trouble/gaming/" className="hover:text-white transition-colors">
+                    ゲーマー向け
+                  </a>
+                </li>
+                <li>
+                  <a href="/trouble/single-living/" className="hover:text-white transition-colors">
+                    一人暮らし向け
+                  </a>
+                </li>
+                <li>
+                  <a href="/trouble/family/" className="hover:text-white transition-colors">
+                    ファミリー向け
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* ランキング・コラム */}
+            <div>
+              <p className="text-white font-bold mb-3">ランキング・コラム</p>
+              <ul className="space-y-2">
+                <li>
+                  <a href="/ranking/cheap/" className="hover:text-white transition-colors">
+                    安い光回線ランキング
+                  </a>
+                </li>
+                <li>
+                  <a href="/ranking/fastest/" className="hover:text-white transition-colors">
+                    速い光回線ランキング
+                  </a>
+                </li>
+                <li>
+                  <a href="/knowledge/what-is-hikari/" className="hover:text-white transition-colors">
+                    光回線とは？
+                  </a>
+                </li>
+                <li>
+                  <a href="/knowledge/ipv6/" className="hover:text-white transition-colors">
+                    IPv6（IPoE）とは？
+                  </a>
+                </li>
+                <li>
+                  <a href="/article/nuro-mansion/" className="hover:text-white transition-colors">
+                    NURO光マンション
+                  </a>
+                </li>
+                <li>
+                  <a href="/article/wifi-router/" className="hover:text-white transition-colors">
+                    Wi-Fiルーターおすすめ
                   </a>
                 </li>
               </ul>

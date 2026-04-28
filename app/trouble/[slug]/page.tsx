@@ -1,0 +1,235 @@
+import { notFound } from "next/navigation";
+import troubles from "../../../data/troubles.json";
+import SiteHeader from "../../components/SiteHeader";
+import SiteFooter from "../../components/SiteFooter";
+import Breadcrumb from "../../components/Breadcrumb";
+
+export async function generateStaticParams() {
+  return troubles.map((t) => ({ slug: t.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const trouble = troubles.find((t) => t.slug === slug);
+  if (!trouble) return {};
+  return {
+    title: `${trouble.title} | マンション回線ガイド`,
+    description: trouble.description,
+  };
+}
+
+export default async function TroublePage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const trouble = troubles.find((t) => t.slug === slug);
+
+  if (!trouble) {
+    notFound();
+  }
+
+  return (
+    <div className="flex flex-col min-h-screen">
+      <SiteHeader />
+
+      <div className="bg-white border-b border-border">
+        <Breadcrumb
+          items={[
+            { label: "お悩み別", href: "/trouble/slow-speed/" },
+            { label: trouble.title },
+          ]}
+        />
+      </div>
+
+      <main className="flex-1">
+        {/* Hero */}
+        <section className="bg-gradient-to-br from-primary/5 via-white to-accent/5 py-12 md:py-16">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="flex flex-wrap items-center gap-2 mb-4">
+              <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
+                お悩み解決
+              </span>
+              <span className="inline-block px-3 py-1 bg-accent/10 text-accent text-xs font-medium rounded-full">
+                マンション向け
+              </span>
+            </div>
+            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4 leading-tight">
+              {trouble.title}
+            </h1>
+            <p className="text-muted text-lg">{trouble.description}</p>
+          </div>
+        </section>
+
+        {/* Table of Contents */}
+        <section className="py-8 bg-white border-b border-border">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="bg-primary/5 rounded-xl border border-primary/20 p-6">
+              <h2 className="text-base font-bold text-foreground mb-3">目次</h2>
+              <ol className="space-y-2">
+                {trouble.sections.map((section, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm">
+                    <span className="w-5 h-5 rounded-full bg-primary text-white flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">
+                      {i + 1}
+                    </span>
+                    <a
+                      href={`#section-${i}`}
+                      className="text-primary hover:underline"
+                    >
+                      {section.heading}
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        {/* Sections */}
+        <section className="py-12">
+          <div className="max-w-4xl mx-auto px-4 space-y-10">
+            {trouble.sections.map((section, i) => (
+              <div key={i} id={`section-${i}`} className="scroll-mt-20">
+                <h2 className="text-2xl font-bold text-foreground mb-4 flex items-center gap-3">
+                  <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold flex-shrink-0">
+                    {i + 1}
+                  </span>
+                  {section.heading}
+                </h2>
+                <div className="bg-white rounded-xl border border-border p-6">
+                  <p className="text-foreground leading-relaxed">{section.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Tips */}
+        <section className="py-12 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-2xl font-bold text-foreground mb-6">重要ポイント</h2>
+            <div className="bg-emerald-50 rounded-2xl border border-emerald-200 p-6">
+              <ul className="space-y-3">
+                {trouble.tips.map((tip, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm text-foreground">
+                    <span className="text-emerald-500 font-bold mt-0.5 flex-shrink-0">✓</span>
+                    {tip}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-12">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-2xl font-bold text-foreground mb-6">よくある質問</h2>
+            <div className="space-y-4">
+              {trouble.faqs.map((faq, i) => (
+                <details
+                  key={i}
+                  className="group rounded-xl border border-border bg-white overflow-hidden"
+                >
+                  <summary className="flex items-center justify-between cursor-pointer px-6 py-4 text-base font-medium text-foreground hover:bg-gray-50 transition-colors list-none">
+                    <span className="flex items-center gap-3">
+                      <span className="text-primary font-bold flex-shrink-0">Q.</span>
+                      {faq.q}
+                    </span>
+                    <svg
+                      className="w-5 h-5 text-muted transition-transform group-open:rotate-180 flex-shrink-0 ml-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                      />
+                    </svg>
+                  </summary>
+                  <div className="px-6 pb-5 pt-2">
+                    <p className="text-sm text-muted leading-relaxed pl-8">
+                      <span className="text-accent font-bold mr-1">A.</span>
+                      {faq.a}
+                    </p>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA */}
+        <section className="py-12 bg-gradient-to-r from-primary to-primary-dark">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <h2 className="text-2xl font-bold text-white mb-4">
+              あなたに合った光回線を見つけよう
+            </h2>
+            <p className="text-white/80 mb-6">
+              マンション向け光回線10社を徹底比較
+            </p>
+            <a
+              href="/#compare"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-accent hover:bg-accent-dark text-white font-bold rounded-xl text-lg transition-colors shadow-lg"
+            >
+              料金比較を見る
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                />
+              </svg>
+            </a>
+          </div>
+        </section>
+
+        {/* Related */}
+        <section className="py-10 bg-white">
+          <div className="max-w-4xl mx-auto px-4">
+            <h2 className="text-lg font-bold text-foreground mb-4">関連記事</h2>
+            <div className="grid md:grid-cols-3 gap-4">
+              <a
+                href="/trouble/slow-speed/"
+                className="block p-4 rounded-xl border border-border hover:border-primary hover:bg-primary/5 transition-colors"
+              >
+                <p className="text-sm font-bold text-foreground mb-1">回線が遅い時の改善方法</p>
+                <p className="text-xs text-muted">7つの対策</p>
+              </a>
+              <a
+                href="/trouble/remote-work/"
+                className="block p-4 rounded-xl border border-border hover:border-primary hover:bg-primary/5 transition-colors"
+              >
+                <p className="text-sm font-bold text-foreground mb-1">在宅ワーク向け回線選び</p>
+                <p className="text-xs text-muted">安定性重視</p>
+              </a>
+              <a
+                href="/trouble/gaming/"
+                className="block p-4 rounded-xl border border-border hover:border-primary hover:bg-primary/5 transition-colors"
+              >
+                <p className="text-sm font-bold text-foreground mb-1">ゲーマー向け最速回線</p>
+                <p className="text-xs text-muted">マンション編</p>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <SiteFooter />
+    </div>
+  );
+}
